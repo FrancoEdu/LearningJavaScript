@@ -18,3 +18,11 @@ function numberPrime(num){
 
 //Função de saudação utilizando arrow function
 let idade = (idade) => console.log(`Você tem ${idade} anos`)
+
+//funcão soma utilizando arrow function
+let sum = (num1,num2) => num1+num2
+
+//função para retornar um numero aleatório.
+let limitOfRandomNumber = (limit) => parseInt(Math.random() * limit)
+
+console.log(limitOfRandomNumber(50))
