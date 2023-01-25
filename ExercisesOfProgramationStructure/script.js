@@ -24,5 +24,3 @@ let sum = (num1,num2) => num1+num2
 
 //função para retornar um numero aleatório.
 let limitOfRandomNumber = (limit) => parseInt(Math.random() * limit)
-
-console.log(limitOfRandomNumber(50))
