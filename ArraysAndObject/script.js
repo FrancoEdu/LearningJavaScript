@@ -75,14 +75,14 @@ let arrayOfBoolean = [true,false,true]
 // console.log(nomeB)
 
 //======================================================== JSON ==================================================
-let person = {
-    "name": "Eduardo",
-    "age" : 21,
-    "Profession" : "IT Support Technician ll",
-    "hobbies" : ["Play video game", "Study a lot", "Read books about economy"]
-}
+// let person = {
+//     "name": "Eduardo",
+//     "age" : 21,
+//     "Profession" : "IT Support Technician ll",
+//     "hobbies" : ["Play video game", "Study a lot", "Read books about economy"]
+// }
 
-let personToString = JSON.stringify(person)
-console.log(personToString)
-let personStringToJSON = JSON.parse(personToString)
-console.log(personStringToJSON)
+// let personToString = JSON.stringify(person)
+// console.log(personToString)
+// let personStringToJSON = JSON.parse(personToString)
+// console.log(personStringToJSON)
