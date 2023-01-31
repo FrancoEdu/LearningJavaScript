@@ -52,5 +52,63 @@ let cachorroNovo = Object.create(cachorro);
 cachorroNovo.raca = "Pastor Alemão";
 console.log(cachorroNovo.raca);
 ```
+* Aplicando isso à uma função
 
+```js
+function criaCachorro(tamanho, raca, idade){
+    let cachorro = Object.create({});
+    cachorro.tamanho = tamanho;
+    cachorro.raca = raca;
+    cachorro.idade = idade;
+    cachorro.latir = function(){
+        return "Au au";
+    }
+    return cachorro
+}
 
+let cachorro = criaCachorro("Pequeno", "Shitzu", 5);
+console.log(cachorro + cachorro.latir())
+```
+## Construtor por new
+* Em muitas linguagens temos a possibilidade de instanciar um objeto com new, no JS também
+```js
+function cachorro(raca, idade, porte){
+    this.raca = raca;
+    this.idade = idade;
+    this.porte = porte;
+    this.uivar = function(){
+        return "Auuuuuuuuuuuuuuu"
+    }
+}
+let husky = new cachorro("Husky", 12, "Médio");
+console.log(husky.raca);
+```
+## Construtor com método
+* Além da propriedades, podemos criar a classe base já com métodos, basta definir ao prototype o método desejado
+```js
+function cachorro(raca, idade, porte){
+    this.raca = raca;
+    this.idade = idade;
+    this.porte = porte;
+}
+cachorro.prototype.uivar = function(){
+    return "Auuuuuuuuuuuuuuu"
+}
+
+let pug = new cachorro("Pug", 3, "Pequeno");
+pug.uivar();
+```
+
+## Construtor na classe (ES6)
+* Com a versão do ES6, uma possibilidade de criar uma classe(objeto) com construtor foi adicionada, então não precisamos mais criar por meio de uma função
+```js
+class Cachorro{
+    constructor(raca, idade, porte){
+        this.raca = raca;
+        this.idade = idade;
+        this.porte = porte;
+    }
+}
+
+let cachorro = new Cachorro("Labrador", 6, "Grande")
+```
