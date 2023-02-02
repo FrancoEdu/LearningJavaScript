@@ -112,3 +112,39 @@ class Cachorro{
 
 let cachorro = new Cachorro("Labrador", 6, "Grande")
 ```
+
+## Herança 
+* Uma classe pode herdar propriedades de outra classe por herança, para isso utilizamos o Extends
+
+```js
+class Mamifero{
+    constructor(patas){
+        this.patas = patas;
+    }
+}
+
+class Coiote extends Mamifero{
+    constructor(patas, porte){
+        super(patas,patas);
+        this.porte = porte
+    }
+}
+```
+
+## InstanceOf operator
+* Podemos verificar quem o é o pai do objeto utilizando o instanceof
+```js
+class Mamifero{
+    constructor(patas){
+        this.patas = patas;
+    }
+}
+
+class Coiote extends Mamifero{
+    constructor(patas, porte){
+        super(patas,patas);
+        this.porte = porte
+    }
+}
+console.log(new Coiote instanceof Mamifero);
+```
