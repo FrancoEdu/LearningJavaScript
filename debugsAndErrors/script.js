@@ -43,7 +43,9 @@ function validCPF(CPF){
         secondStep = true;
     }
 
-    console.log(firstStep + " , " + secondStep)
- }
-
-validCPF("529.982.247-25")
+    if(firstStep != true || secondStep != true){
+        return false
+    }else{
+        return true
+    }
+}
